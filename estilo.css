@@ -1,0 +1,152 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5e6d3; /*color de fondo del sitio*/
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+nav a {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px;
+    background-color: #f4a261; /*color de fondo del enlace*/
+    color: white;
+    text-decoration: none;
+    border: 2px solid #2e8b57;   /* borde */
+    border-radius: 10px;         /* esquinas redondeadas */
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.3); /* sombra */
+    transition: 0.3s;            /* animación suave */
+}
+nav a:hover {/*estilos para el enlace al pasar el mouse por encima*/
+    background-color: #e76f51; /*color de fondo del enlace al pasar el mouse por encima*/
+    color: #fff;
+    transform: scale(1.05); /* pequeño efecto */
+}
+
+nav a:no-buttondy:hover {/*estilos para el enlace activo al pasar el mouse por encima*/
+    background-color: #333333;/*color de fondo del enlace activo*/
+}
+
+.menu{/*estilos para el menú de navegación*/
+    display: flex;/*establece un contenedor flexible para los elementos hijos*/
+    justify-content: center;/*centra el contenido horizontalmente*/
+    background-color: #d97757;/*color de fondo del menú con transparencia*/
+    padding: 15px;/*agrega espacio dentro del menú*/
+    gap: 15px; /*agrega espacio entre los elementos del menú*/
+    flex-direction: row;/*organiza los elementos del menú en una fila*/
+    align-items: center;/*centra los elementos del menú verticalmente*/
+
+}
+.seccion {
+    display: flex; /*establece un contenedor flexible para los elementos hijos*/
+    justify-content: center;/*centra el contenido horizontalmente*/
+    align-items: center;/*centra el contenido verticalmente*/
+    padding: 30px; /*agrega espacio alrededor del contenido*/
+    min-height: 300px; /*establece una altura mínima para la sección*/
+
+}
+
+/**/
+
+.galeria{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;/*Permite que los elementos se ajusten a la siguiente línea si no caben en una sola fila*/
+    padding: 30px;
+    background-color: #faedcd;/*color de fondo de la galería con transparencia*/
+}
+
+.tarjeta{
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);/*Agrega una sombra suave alrededor de la tarjeta*/
+    transition: 0.3s;/*Agrega una transición suave para el efecto de hover*/
+}
+.tarjeta:hover{
+    transform: scale(1.05);/*Aumenta el tamaño de la tarjeta al pasar el mouse por encima*/
+}
+.tarjeta img{
+    width: 100%;
+    height: 100px;
+    object-fit: contain;/*Asegura que la imagen se ajuste dentro del contenedor sin distorsionarse*/
+    max-width: 100%;/*Asegura que la imagen no exceda el ancho del contenedor*/
+    height: 200px;/*Establece una altura fija para las imágenes*/
+    object-fit: cover;/*Asegura que la imagen cubra completamente el área del contenedor, recortando si es necesario*/
+    border-radius: 10px;/*Agrega bordes redondeados a las imágenes*/
+    
+}
+
+.formulario{
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #fff8f0;/*color de fondo del formulario con transparencia*/
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);/*Agrega una sombra suave alrededor del formulario*/
+}
+
+h1,h2,p{
+    text-align: center;/*Centra el texto dentro de los elementos h1, h2 y p*/
+}
+
+.formulario input,
+.formulario textarea{
+    padding: 12px;
+    border-radius: 10px;/*Agrega bordes redondeados a los campos de entrada*/
+    border: 1px solid gray;/*Agrega un borde gris claro a los campos de entrada*/
+    font-size: 16px;/*Aumenta el tamaño de fuente para una mejor legibilidad*/
+}
+.formulario button{
+    background-color: #e76f51;/*Establece un color de fondo azul para el botón*/
+    color: white;/*Establece el color del texto del botón a blanco*/
+    padding: 12px;
+    border: none;/*Elimina el borde del botón*/
+    border-radius: 10px;/*Agrega bordes redondeados al botón*/
+    cursor: pointer;/*Cambia el cursor a un puntero al pasar sobre el botón*/
+    transition: 0.3s;/*Agrega una transición suave para el efecto de hover*/
+    font-size: 16px;/*Aumenta el tamaño de fuente del botón para una mejor legibilidad*/
+    
+}
+.formulario button:hover{
+    background-color: #c8553d;/*Cambia el color de fondo del botón al pasar el mouse por encima*/
+}
+footer{
+    background-color: #6d4c41;
+    color: white;
+    padding: 15px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column; /*Organiza los elementos del menú en una columna en pantallas pequeñas*/
+        align-items: center;
+    }
+    .seccion {
+        flex-direction: column; /*Organiza el contenido de la sección en una columna en pantallas pequeñas*/
+        align-items: center;
+    }
+    .galeria {
+        flex-direction: column; /*Organiza las tarjetas de la galería en una columna en pantallas pequeñas*/
+        align-items: center; /*Centra las tarjetas de la galería horizontalmente en pantallas pequeñas*/
+        padding: 15px; /*Reduce el padding de la galería en pantallas pequeñas*/
+    }
+    .tarjeta{
+        width: 90%; /*Hace que las tarjetas de la galería ocupen el 100% del ancho del contenedor en pantallas pequeñas*/
+        max-width: 400px; /*Limita el ancho máximo de las tarjetas en pantallas pequeñas para evitar que se vean demasiado grandes*/
+    }
+    .formulario {
+        width: 90%; /*Hace que el formulario ocupe el 100% del ancho del contenedor en pantallas pequeñas*/
+        max-width: 400px; /*Limita el ancho máximo del formulario en pantallas pequeñas para evitar que se vea demasiado grande*/
+    }
+}
